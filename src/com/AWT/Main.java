@@ -25,24 +25,36 @@ public class Main {
             g2.draw(line2D);
 
             Rectangle2D rectangle1 = new Rectangle2D.Double(0,0,100,100); // прямоугольник
-            Color color1 = new Color(0f,0f, 0f);
+            Color color1 = new Color(0,0, 0);
             g2.setColor(color1);
             g2.fill(rectangle1); // прорисовка
 
             Rectangle2D rectangle2 = new Rectangle2D.Double(100,0,100,100); // прямоугольник
-            Color color2 = new Color(0f,0f, 0f, 0.5f);
+            Color color2 = new Color(0,0, 0, 155);
             g2.setColor(color2);
             g2.fill(rectangle2); // прорисовка
 
             Rectangle2D rectangle3 = new Rectangle2D.Double(200,0,100,100); // прямоугольник
-            Color color3 = new Color(0f,0f, 0f, 0.1f);
+            Color color3 = new Color(0,0, 0, 50);
             g2.setColor(color3);
             g2.fill(rectangle3); // прорисовка
 
             Rectangle2D rectangle4 = new Rectangle2D.Double(300,0,100,100); // прямоугольник
-            Color color4 = new Color(0f,0f, 0f, 0f);
+            Color color4 = new Color(0,0, 0, 0);
             g2.setColor(color4);
             g2.fill(rectangle4); // прорисовка
+
+            //------------------------------------------------------------------------AlphaComposite
+            Rectangle2D rectangle5 = new Rectangle2D.Double(0,100,100,100); // прямоугольник
+            Color color5 = new Color(0,255, 0);
+            g2.setColor(color5);
+            g2.fill(rectangle5); // прорисовка
+
+            Rectangle2D rectangle6 = new Rectangle2D.Double(50,100,100,100); // прямоугольник
+            Color color6 = new Color(0,0, 255, 155);
+            g2.setColor(color6);
+            g2.setComposite(AlphaComposite.SrcOver);
+            g2.fill(rectangle6); // прорисовка
         }
     }
 
